@@ -113,9 +113,11 @@ export function useBuiltinValidation(messages, customValidationRules) {
 
         const field = e.target;
         setErrors((old) => {
-          const newErrors = { ...old };
-          delete newErrors[field.name];
-          return newErrors;
+          if (old[field.name]) {
+            const newErrors = { ...old };
+            delete newErrors[field.name];
+            return newErrors;
+          }
         });
 
         runCustomValidationRules(field.form.elements, customValidationRules);
