@@ -1,0 +1,7 @@
+{
+  "/api*": "$1",
+  "/users*": "/600/users$1",
+  "/ads*": "/644/ads?_limit=10$1",
+  "/categories*": "/644/categories$1",
+  "/carts*": "/644/carts$1"
+}

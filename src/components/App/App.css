@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Brand Colors */
+  --primary-color: #4d6665;
+  --primary-dark-color: #183130;
+  --primary-light-color: #a5bdac;
+  --primary-lightest-color: #d5dbb5;
+  --accent-color: #ffda76;
+  --accent-light-color: #f2e9b9;
+
+  /* Other colors */
+  --error-color: #c22d00;
+  --error-color-light: #fb6234;
+
+  /* Text colors */
+  --text-color: #333;
+  --text-inverse-color: #efefef;
+  --text-muted-color: #555;
+
+  --border-radius-sm: 3px;
+  --border-radius-md: 5px;
+  --border-radius-round: 50%;
+}
+
+html {
+  font-family: sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  margin: 0;
+}
+
+.pageForm {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 0.6rem;
+  align-items: center;
+
+  margin: auto;
+
+  max-width: 75%;
+  min-width: 640px;
+}
+
+.pageForm label {
+  text-align: right;
+}
+
+.pageForm .labelTop {
+  align-self: start;
+}
+
+.pageForm .inputError {
+  color: var(--error-color);
+  padding-top: 0;
+  grid-column-start: 2;
+}
+
+.brandInput,
+.pageForm input:where(:not([type='checkbox'], [type='radio'])) {
+  --border-color: var(--primary-color);
+  --text: var(var(--text-color));
+
+  padding: 0.4rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text);
+  font-family: inherit;
+}
+
+.brandInput.isInvalid,
+.pageForm input:where(:not([type='checkbox'], [type='radio'])).isInvalid {
+  --border-color: var(--error-color);
+  --text: var(--error-color);
+}
+
+label:has(+ .brandInput.isInvalid),
+.pageForm label:has(+ input.isInvalid),
+.isInvalid + label {
+  color: var(--error-color);
+}
+
+.pageForm .submitBtn {
+  grid-column-start: 2;
+}
+
+.btn {
+  --bg-color: var(--primary-light-color);
+  --text: var(--primary-color);
+  --border-color: var(--primary-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+
+  padding: 0.3rem 1rem;
+  width: fit-content;
+
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn--primary {
+  --bg-color: var(--primary-color);
+  --text: var(--text-inverse-color);
+  --border-color: var(--primary-dark-color);
+}
+
+.btn--accent {
+  --bg-color: var(--accent-color);
+  --text: var(--text-muted-color);
+  --border-color: var(--text-muted-color);
+}
+
+.btn:disabled {
+  --bg-color: var(--primary-light-color);
+  --text: var(--text-muted-color);
+  --border-color: var(--text-muted-color);
+  cursor: not-allowed;
+  filter: opacity(0.5);
+}

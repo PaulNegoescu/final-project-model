@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "email": "p@p.com",
+      "password": "$2a$10$SpxHxr17rqIeG32sAHFEQuoQxoNCKG6YuSbFVV/QjADeaA5TJ2HWK",
+      "firstName": "Paul",
+      "lastName": "Neogescu",
+      "id": 1
+    },
+    {
+      "email": "a@a.com",
+      "password": "$2a$10$CiFT4FqsGb9IrI2vt3Lu8OqcQaf077zOQNqZq2hQSH8gY8n0cErWG",
+      "firstName": "Paul",
+      "lastName": "Neogescu",
+      "id": 2
+    },
+    {
+      "email": "b@b.com",
+      "password": "$2a$10$pxZzJ7Yx6poWDyT3o0Ovauy5mqqh3l45ZHEpsRIjlK4wk/RWTn9ca",
+      "firstName": "Paul",
+      "lastName": "Neogescu",
+      "id": 3
+    },
+    {
+      "email": "c@c.com",
+      "password": "$2a$10$dlYp/p/wecIGqq5NbZvCq.1E7W7GIwr2nckjL4N64xWRdeT2AaYiu",
+      "firstName": "Paul",
+      "lastName": "Test",
+      "id": 4
+    },
+    {
+      "email": "d@d.com",
+      "password": "$2a$10$F8E2SzHlXkwFAD0RcmAemO8Rt1nu0eZO97/9r9wECKr6/pbrpFVWe",
+      "firstName": "Paul",
+      "lastName": "Test",
+      "id": 5
+    },
+    {
+      "email": "r@e.com",
+      "password": "$2a$10$YJ4Q9OKwFbUOp2Xf0xshCO0XSXQhrw0ngE683vdx.1bGJQJbWaviC",
+      "firstName": "Paul",
+      "lastName": "faasdfas",
+      "id": 6
+    }
+  ],
+  "ads": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Lorem Ipsum",
+      "description": "Lorem Ipsum dolor sit amet consectetur adipiscing elit.",
+      "price": 199.99,
+      "stock": 2,
+      "imageUrl": "https://picsum.photos/200/300",
+      "categoryId": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Phones"
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "adId": 1,
+      "quantity": 2
+    }
+  ]
+}
